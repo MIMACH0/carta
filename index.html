@@ -1,106 +1,16 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Mely ❤️</title>
-    <style>
-        :root {
-            --fondo-rosa: #ffb3d1;
-            --texto-oscuro: #4a0e0e;
-            --corazon: #e91e63;
-        }
-
-        body {
-            background-color: var(--fondo-rosa);
-            background-image: radial-gradient(circle, #ff99c8 20%, transparent 20%), radial-gradient(circle, #ff99c8 20%, transparent 20%);
-            background-size: 50px 50px;
-            background-position: 0 0, 25px 25px;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            color: var(--texto-oscuro);
-        }
-
-        .carta {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 400px;
-            width: 90%;
-            border: 5px solid white;
-        }
-
-        h1 { font-size: 1.5rem; margin-bottom: 10px; }
-        
-        /* Contenedor del Árbol */
-        .arbol-container {
-            font-size: 80px;
-            margin: 20px 0;
-            animation: latido 1.5s infinite;
-        }
-
-        @keyframes latido {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        .contador {
-            background: #fff0f5;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-
-        #reloj {
-            display: block;
-            color: var(--corazon);
-            margin-top: 5px;
-            font-size: 1.1rem;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="carta">
-        <h1>Para el amor de mi vida MELY:</h1>
-        <p>Si pudiera elegir un lugar seguro, sería a tu lado...</p>
-        
-        <div class="arbol-container">
-            🌳<br>💗💗<br>💗💗💗
-        </div>
-
-        <div class="contador">
-            Nuestro amor comenzó hace:
-            <span id="reloj">Cargando tiempo...</span>
-        </div>
+<div class="carta-container">
+  <div class="sobre">
+    <div class="arbol-corazones">
+      </div>
+    
+    <div class="mensaje">
+      <h2>Para el amor de mi vida MELY:</h2>
+      <p id="texto-amor">Si pudiera elegir un lugar seguro, sería a tu lado...</p>
+      
+      <div class="contador">
+        <p>Nuestro amor comenzó hace:</p>
+        <span id="reloj"></span>
+      </div>
     </div>
-
-    <script>
-        function actualizarContador() {
-            // CAMBIA ESTA FECHA: Año, Mes (0-11), Día
-            const fechaInicio = new Date(2024, 1, 14, 0, 0, 0); 
-            const ahora = new Date();
-            const diff = ahora - fechaInicio;
-
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-            const m = Math.floor((diff / 1000 / 60) % 60);
-            const s = Math.floor((diff / 1000) % 60);
-
-            document.getElementById('reloj').innerText = 
-                `${d}d ${h}h ${m}m ${s}s`;
-        }
-
-        setInterval(actualizarContador, 1000);
-        actualizarContador();
-    </script>
-</body>
-</html>
+  </div>
+</div>
